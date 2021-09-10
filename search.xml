@@ -383,7 +383,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Typecho blog migration notes</title>
+    <title>更换VPS后Typecho博客迁移笔记</title>
     <url>/2021/05/02/Typecho-blog-migration-notes/</url>
     <content><![CDATA[<p>其实更换了VPS后转移Typecho数据库还算简单</p>
 <span id="more"></span>

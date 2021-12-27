@@ -938,7 +938,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-10 14:00:16" itemprop="dateModified" datetime="2021-09-10T14:00:16+08:00">2021-09-10</time>
+                <time title="修改时间：2021-12-27 16:22:37" itemprop="dateModified" datetime="2021-12-27T16:22:37+08:00">2021-12-27</time>
               </span>
 
           <br>
@@ -947,7 +947,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.1k</span>
+              <span>2k</span>
             </span>
 
         </div>
@@ -959,8 +959,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="2021-01-24更新："><a href="#2021-01-24更新：" class="headerlink" title="2021.01.24更新："></a>2021.01.24更新：</h3><blockquote>
-<p>这篇博客已然过去了半年多，在这半年时间里我早已发现OneNote2016仍不能达到我的需求，更何况OneNote并不支持原生Markdown语法；在有了平板之后我发现移动端浏览笔记也变成了刚需，但移动端的OneNote简直令人无语，即使运用代理我也觉得不能让我满意。最终，我选择了All in One的Notion，这款笔记软件（严格来讲它不仅仅是一个笔记软件）已经超越了我心中OneNote的地位。我会在一段时间后详细介绍Notion。</p>
+          <h3 id="2021-01-24更新："><a href="#2021-01-24更新：" class="headerlink" title="2021.01.24更新："></a>2021.01.24更新：</h3><p>已经抛弃OneNote转向Notion了，如果这篇文章能给你帮助的话我很高兴。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/08/10/How-to-Save-OneNote/#more" rel="contents">
@@ -1102,6 +1101,64 @@
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
+  <div id="site-runtime">
+  <span class="post-meta-item-icon">
+    <i class="fa fa-clock-o"></i>
+  </span>
+  <span id="runtime"></span>
+</div>
+
+<script language="javascript">
+  function isPC() {
+    var userAgentInfo = navigator.userAgent;
+    var agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+    for (var i = 0; i < agents.length; i++) {
+      if (userAgentInfo.indexOf(agents[i]) > 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function siteTime(openOnPC, start) {
+    window.setTimeout("siteTime(openOnPC, start)", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+      start = new Date("2021-01-23 09:00:00 +0800");
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = now.getMonth() + 1;
+    var date = now.getDate();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    var diff = now - start;
+
+    var diffYears = Math.floor(diff / years);
+    var diffDays = Math.floor((diff / days) - diffYears * 365);
+    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+
+    if (openOnPC) {
+      document.getElementById("runtime").innerHTML = "Running: " + diffYears + " years " + diffDays + " days " + diffHours + " hours " + diffMinutes + " mins " + diffSeconds + " secs";
+    } else {
+      document.getElementById("runtime").innerHTML = "Running: " + diffYears + "y " + diffDays + "d " + diffHours + "h " + diffMinutes + "m " + diffSeconds + "s";
+    }
+  }
+
+  var showOnMobile = false;
+  var openOnPC = isPC();
+  var start = new Date();
+  siteTime(openOnPC, start);
+
+  if (!openOnPC && !showOnMobile) {
+    document.getElementById('site-runtime').style.display = 'none';
+  }
+</script>
 
         
 

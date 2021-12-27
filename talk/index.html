@@ -1,17 +1,412 @@
-extends includes/layout.pug
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-block content
-  #page
-    case page.type
-      when 'tags'
-        include includes/page/tags.pug
-      when 'link'
-        include includes/page/flink.pug
-      when 'categories'
-        include includes/page/categories.pug
-      default
-        include includes/page/default-page.pug
+<link rel="stylesheet" href="/css/main.css">
 
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="2021年6月份2021-06-14活了20年，发现自己一文不值。我是猪脑子，或许猪脑子都不如，从小到大，数学或者说理科就极差，刷题试过，补课试过，背题也试过，但就是不开窍，是差不多被老师放弃的那一种，常常被母亲说怎么没遗传她的脑子。日常生活中我的朋友们也经常觉得我憨憨的。我情商低，不知道和女生聊天，不知道如何讨女生喜欢，高中因为有点笨被几个女生嘲笑，以至于到现在看到女生都不太敢说话。外加自己长">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Talk">
+<meta property="og:url" content="http://example.com/talk/index.html">
+<meta property="og:site_name" content="Winter">
+<meta property="og:description" content="2021年6月份2021-06-14活了20年，发现自己一文不值。我是猪脑子，或许猪脑子都不如，从小到大，数学或者说理科就极差，刷题试过，补课试过，背题也试过，但就是不开窍，是差不多被老师放弃的那一种，常常被母亲说怎么没遗传她的脑子。日常生活中我的朋友们也经常觉得我憨憨的。我情商低，不知道和女生聊天，不知道如何讨女生喜欢，高中因为有点笨被几个女生嘲笑，以至于到现在看到女生都不太敢说话。外加自己长">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/AlexFelix1013/image/master/Talk.jpg#vwid=3507&vhei=2000">
+<meta property="article:published_time" content="2021-09-08T15:32:26.000Z">
+<meta property="article:modified_time" content="2021-09-18T11:43:39.856Z">
+<meta property="article:author" content="Alex Felix">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/AlexFelix1013/image/master/Talk.jpg#vwid=3507&vhei=2000">
+
+<link rel="canonical" href="http://example.com/talk/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Talk | Winter
+</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Winter</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">By Accident?Maybe.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-talk">
+
+    <a href="/talk/" rel="section"><i class="fa fa-shower fa-fw"></i>说说</a>
+
+  </li>
+        <li class="menu-item menu-item-links">
+
+    <a href="/links/" rel="section"><i class="fa fa-magnet fa-fw"></i>友链</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">Talk
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <p><img src="https://raw.githubusercontent.com/AlexFelix1013/image/master/Talk.jpg#vwid=3507&vhei=2000"></p>
+<h3 id="2021年6月份"><a href="#2021年6月份" class="headerlink" title="2021年6月份"></a>2021年6月份</h3><h4 id="2021-06-14"><a href="#2021-06-14" class="headerlink" title="2021-06-14"></a>2021-06-14</h4><p>活了20年，发现自己一文不值。<br>我是猪脑子，或许猪脑子都不如，从小到大，数学或者说理科就极差，刷题试过，补课试过，背题也试过，但就是不开窍，是差不多被老师放弃的那一种，常常被母亲说怎么没遗传她的脑子。<br>日常生活中我的朋友们也经常觉得我憨憨的。<br>我情商低，不知道和女生聊天，不知道如何讨女生喜欢，高中因为有点笨被几个女生嘲笑，以至于到现在看到女生都不太敢说话。<br>外加自己长的丑，看到颜值高点的女生基本就是低头。<br>从小由于各种原因，比较自卑。<br>好像自己没什么能拿得出手的东西，语文忽高忽低，只有英语还可以。<br>属于那种不听课就能保持在140以上的人，英语老师特批我在英语课上做数学和理科。<br>可能天赋都点在这里了，大学又因为贪玩和对肿瘤的兴趣又把它荒废了一些。又因为自己比较好幻想，好发呆，容易沉浸到自己的思想和世界里，经常对外界充耳不闻，让别人老是以为我特别憨或者特别傻。<br>傻人有傻福吧。<br>因为自己的幻想，和沉默时常常写文字的习惯，我有时会写小说和故事，高中还拿过奖项。<br>可能是因为自己自卑，或者说温柔？常常想这样做会不会给别人添麻烦。<br>心情不好的时候常常自己一个人盯着电脑屏幕发呆，可能这样呆下去，我真的会变成傻子吧。<br>我想找别人倾诉，但还在想这样会不会让别人心情也变坏?<br>我有两个表姐，小时候对我很好，成绩也很好，是那种别人家的孩子。<br>初中的时候面对孤立无援的境地，我常常会想起她们，慢慢地，我变成了姐控，一直想要一个大姐姐来抱住我，但现在想想，我也许不配大姐姐来拥抱吧。<br>两个表姐很忙，我已经很久没和她们见面和聊天了，最长的大概有四年多了。<br>因为自己远远不如她们，我断绝了联系她们的念头，即使她们很疼我。<br>我是个路痴，分不清东南西北，也就比出门就会丢好一点点。<br>我有时候不相信命运，但却被命运玩弄于鼓掌间，用尽全力也只是考入公费普通高中，用尽全力也只是普通双非，用尽全力也揣测不清对方的心思。<br>他们为什么这么厉害啊。<br>可能，我只是在假努力吧。<br>可能，我天生就是有些傻乎乎的。<br>可能，我就是应该把话憋在心里从不说出，明明很无奈很伤心也会说我没事。<br>累了，睡了。</p>
+<h4 id="2021-04-14"><a href="#2021-04-14" class="headerlink" title="2021-04-14"></a>2021-04-14</h4><p>咕咕咕，咕咕咕咕……<br>果然已经进化成一只成熟的鸽子了。<br>这些日子发生了许多事，后续内容会陆续补充的。<br>然后这段日子技术性文章应该会很多，干货什么的会陆续上架。<br>还有件事，年轻人不要碰欧洲卡车模拟 2。<br>我现在很后悔前天花 20 多买了它。</p>
+<h3 id="2021年3月份"><a href="#2021年3月份" class="headerlink" title="2021年3月份"></a>2021年3月份</h3><h4 id="2021-03-06"><a href="#2021-03-06" class="headerlink" title="2021-03-06"></a>2021-03-06</h4><p>鸽，都可以鸽。<br>时间真的是很快啊，上网课都快一个星期了。有可能 22 号开学，复习时间不多了。<br>追剧的独立页面已经改为跳转到 No­tion 的公开页面了，页面很简洁，平平淡淡才是真。<br>笔记本的升级方案已经确定了，500G 固态＋16G 双通道，笔记本在研究生的时候会换一台新的。<br>开学花钱的项目有不少，我还没想好要多少钱。<br>目前的计划如下：<br>一张中行借记卡和一张中行非人哉万事卡办理，5美元和年费，大概50块？<br>固态硬盘500G，计划是闪迪的至尊3D高速，狗东439，这个还可以的，如果预算足够换三星860EVO。<br>开学打算要550块，攒一个月的钱，然后花呗分期买内存条。<br>考完试以后会对各种项目进行大整理，还有建立本地音乐库，最少耗时一周，我预计大概得12天吧。<br>朋友那里还款计划是一个50一个40，我很感激他们。<br>好好学习英语，争取六级一次过后去网站做医学笔译赚外快。<br>简单学习PS。<br>这就是我当下的计划，希望能够顺利进行吧。</p>
+<h3 id="2021年2月份"><a href="#2021年2月份" class="headerlink" title="2021年2月份"></a>2021年2月份</h3><h4 id="2021-02-23"><a href="#2021-02-23" class="headerlink" title="2021-02-23"></a>2021-02-23</h4><p>又一段时间没有写博客了，网课即将到来，新学期又要开始了。<br>感觉我应该考不了科三的样子，天要下雨，娘要嫁人，随它去吧。<br>26 号晚上会更一篇博客。<br>Net­flix 由于车主更换账号，我的观影记录全都莫得了，有点可惜，以后还是自己手动记录一下吧。</p>
+<h4 id="2021-02-19"><a href="#2021-02-19" class="headerlink" title="2021-02-19"></a>2021-02-19</h4><p>经过两三天的忐忑，也经历了心情的七上八下，今天晚上 7 点钟，导员给我们开了个小班会，通知我们无法正常开学，上两周多的网课再开学，具体开学时间还要看学校的安排。<br>又要上网课了，根本不想上网课，我有点烦躁。<br>父母今天晚上又因为一些话吵了一架，虽然凶猛但时间不是很长。按照经验来看的话后天就会重归于好。<br>我很无奈，也很无力。我不知道下一步该怎么做。<br>我并没有多少结婚的念头，可能就来源于此，但我还是希望现在有个人抱住我，告诉我她就在这里陪着我。<br>可能，我还是想结婚吧，如果要结婚的话，我和她一定要相爱，不要吵架。<br>今天调整了博客名字、介绍和网站 LOGO，同时更换了各个平台的头像。</p>
+<h4 id="2021-02-16"><a href="#2021-02-16" class="headerlink" title="2021-02-16"></a>2021-02-16</h4><p>这两天对博客进行了一下调整，增加了项目，也调整了图床让它看起来没那么乱。<br>追剧那个栏目我还没有补充完，等我开学考完试再进行完善吧。<br>然后也开启了说说这个栏目，就像 QQ 空间的说说一样。也可以当成小日记来写，以前的英文日记还要配图什么的太麻烦了，空闲时间只会越来越少。<br>还有图床的问题，今天才发现的：在文章中插入图片，地址中不能出现中文，否则无法显示，而将加速的原地址粘贴到文章时，中文字段会显示成乱码，这样在文章中才能显示出图片，很迷；页面编辑就完全没有这样的情况，可能是 Bug 吧，以后注意就好。</p>
+
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2021%E5%B9%B46%E6%9C%88%E4%BB%BD"><span class="nav-number">1.</span> <span class="nav-text">2021年6月份</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-06-14"><span class="nav-number">1.1.</span> <span class="nav-text">2021-06-14</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-04-14"><span class="nav-number">1.2.</span> <span class="nav-text">2021-04-14</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2021%E5%B9%B43%E6%9C%88%E4%BB%BD"><span class="nav-number">2.</span> <span class="nav-text">2021年3月份</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-03-06"><span class="nav-number">2.1.</span> <span class="nav-text">2021-03-06</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2021%E5%B9%B42%E6%9C%88%E4%BB%BD"><span class="nav-number">3.</span> <span class="nav-text">2021年2月份</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-02-23"><span class="nav-number">3.1.</span> <span class="nav-text">2021-02-23</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-02-19"><span class="nav-number">3.2.</span> <span class="nav-text">2021-02-19</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2021-02-16"><span class="nav-number">3.3.</span> <span class="nav-text">2021-02-16</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Alex Felix"
+      src="https://raw.githubusercontent.com/AlexFelix1013/image/master/Circle%20Header.png">
+  <p class="site-author-name" itemprop="name">Alex Felix</p>
+  <div class="site-description" itemprop="description">For You,My Lord</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Alex Felix</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">21k</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/live2d-widget@^3.1.3/lib/L2Dwidget.min.js"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"https://cdn.jsdelivr.net/npm/live2d-widget-model-hijiki@1.0.5/assets/hijiki.model.json"},"display":{"superSample":2,"width":125,"height":125,"position":"right","hOffset":30,"vOffset":0},"mobile":{"show":false,"scale":0.05},"react":{"opacityDefault":1,"opacityOnHover":0.2},"log":false});</script></body>
+</html>

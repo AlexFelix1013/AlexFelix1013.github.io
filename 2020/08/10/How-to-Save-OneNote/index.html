@@ -17,15 +17,15 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="2021.01.24更新：已经抛弃OneNote转向Notion了，如果这篇文章能给你帮助的话我很高兴。">
+  <meta name="description" content="已经抛弃OneNote转向Notion了，如果这篇文章能给你帮助的话我很高兴。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OneNote同步问题最终解决方法">
 <meta property="og:url" content="http://example.com/2020/08/10/How-to-Save-OneNote/index.html">
 <meta property="og:site_name" content="Winter">
-<meta property="og:description" content="2021.01.24更新：已经抛弃OneNote转向Notion了，如果这篇文章能给你帮助的话我很高兴。">
+<meta property="og:description" content="已经抛弃OneNote转向Notion了，如果这篇文章能给你帮助的话我很高兴。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%8A%80%E6%9C%AF/OneNote%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/F00001.jpg#vwid=1680&vhei=886">
 <meta property="og:image" content="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%8A%80%E6%9C%AF/OneNote%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/00001.png#vwid=1920&vhei=1028">
@@ -42,7 +42,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%8A%80%E6%9C%AF/OneNote%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/00015.png#vwid=983&vhei=852">
 <meta property="og:image" content="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%8A%80%E6%9C%AF/OneNote%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/00014.png#vwid=1492&vhei=635">
 <meta property="article:published_time" content="2020-08-09T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-12-27T08:22:37.523Z">
+<meta property="article:modified_time" content="2022-02-16T03:33:00.800Z">
 <meta property="article:author" content="Alex Felix">
 <meta property="article:tag" content="软件教程">
 <meta property="article:tag" content="MicroSoft">
@@ -93,7 +93,7 @@
   </style>
 </noscript>
 
-</head>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -246,7 +246,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-12-27 16:22:37" itemprop="dateModified" datetime="2021-12-27T16:22:37+08:00">2021-12-27</time>
+                <time title="修改时间：2022-02-16 11:33:00" itemprop="dateModified" datetime="2022-02-16T11:33:00+08:00">2022-02-16</time>
               </span>
 
           
@@ -269,8 +269,9 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2k</span>
+              <span>1.9k</span>
             </span>
+            <div class="post-description">已经抛弃OneNote转向Notion了，如果这篇文章能给你帮助的话我很高兴。</div>
 
         </div>
       </header>
@@ -281,10 +282,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="2021-01-24更新："><a href="#2021-01-24更新：" class="headerlink" title="2021.01.24更新："></a>2021.01.24更新：</h3><p>已经抛弃OneNote转向Notion了，如果这篇文章能给你帮助的话我很高兴。</p>
-<span id="more"></span>
+        <span id="more"></span>
 
-<p><img src="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%8A%80%E6%9C%AF/OneNote%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/F00001.jpg#vwid=1680&vhei=886"><br><strong>注意：此方法适用于经常在电脑或者笔记本前经常记录或浏览笔记的人群</strong></p>
+<p><img src="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%8A%80%E6%9C%AF/OneNote%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/F00001.jpg#vwid=1680&vhei=886"></p>
+<p><strong>注意：此方法适用于经常在电脑或者笔记本前经常记录或浏览笔记的人群</strong></p>
 <p>Microsoft OneNote，是一套用于自由形式的信息获取以及多用户协作工具。OneNote最常用于笔记本电脑或台式电脑，但这套软件更适合用于支持手写笔操作的平板电脑，在这类设备上可使用触笔、声音或视频创建笔记，比单纯使用键盘更方便。OneNote可作为Microsoft Office和Windows 10的一部分使用。</p>
 <p>众所周知，微软出品的OneNote是一款很优秀的笔记软件，在全世界有着大量的使用者和粉丝，受到许多人的好评，用它来记笔记工作效率极高。<br><img src="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%8A%80%E6%9C%AF/OneNote%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/00001.png#vwid=1920&vhei=1028"><br>但我们也很清楚，OneNote的同步一直是个老大难问题。由于某种原因，OneNote的同步服务体验很差，而大多数人使用的OneNote UWP版本更是不能将笔记保存到本地，这让不少人抛弃了OneNote转向了其他的笔记软件，例如印象笔记、有道云笔记等等。<br>我之前也是被OneNote的同步问题搞到焦头烂额，各种方法都尝试过但都不是特别的有效。我也曾经想过转入其他的笔记软件，但是由于各种原因最终放弃：要么是不能满足我的需求、要么是不习惯操作，要么是因为价格劝退，要么因为是小厂商开发的软件而对其未来发展有着一定的担心……无奈下我用Typora来做笔记，不得不说markdown的语法很强大，但也只是勉强满足我的笔记需求。<br>一天，我想起了OneNote，但还是被它的同步问题劝退，闲暇之余，无聊地点开了OneNote的百度百科。然后，OneNote2016引起了我的注意。<br><img src="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%8A%80%E6%9C%AF/OneNote%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/00004.png#vwid=1064&vhei=400"><br>于是我上网搜索了一下OneNote 2016的相关消息，发现它曾经被微软抛弃过，但由于OneNote UWP的表现并不尽人意，在2019年的11月份，微软宣布：重启OneNote 2016！并且会有以下新特性：</p>
 <blockquote>
@@ -376,7 +377,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#2021-01-24%E6%9B%B4%E6%96%B0%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">2021.01.24更新：</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -426,7 +426,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -436,9 +436,9 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">23k</span>
+    <span title="站点总字数">22k</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
   <div id="site-runtime">
   <span class="post-meta-item-icon">
@@ -522,7 +522,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -553,6 +553,26 @@
   
 
   
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
 
 
 <script>

@@ -31,6 +31,19 @@
       </tags>
   </entry>
   <entry>
+    <title>English Diary:Jul 03,2020 Fri</title>
+    <url>/2020/07/03/English-Diary-Jul-03-2020-Fri/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<p><img src="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%97%A5%E8%AE%B0/English%20DiaryJul%2003%2C2020%20Fri.jpg" alt="img"></p>
+<p>Today, I tweeted and started writing a short diary, trying to record my day. Today is another lazy day.Nothing I do today,well,forget it ,just try again tomorrow. Good night ,darling.</p>
+]]></content>
+      <tags>
+        <tag>日记</tag>
+        <tag>English Articles</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>English Diary:Jul 09,2020 Thu</title>
     <url>/2020/07/09/English-Diary-Jul-09-2020-Thu/</url>
     <content><![CDATA[<span id="more"></span>
@@ -45,19 +58,6 @@
 <p>And today,I’ve had a full day off, I’ve got a Absolute music list to deal with next, an English essay, I’ve got car practice on the 15th, and I can’t put down my CET6 and medical course work, which seems a bit busy.</p>
 <p>And I’m in a bad mood, rather irritable, struggling with the conflict between wanting and not wanting a girlfriend, and in the end, I think it’s better not to look for one, just go with the flow.</p>
 <p>I really wanted a hug and then let me cry for a while. Really, just for a little while.</p>
-]]></content>
-      <tags>
-        <tag>日记</tag>
-        <tag>English Articles</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>English Diary:Jul 03,2020 Fri</title>
-    <url>/2020/07/03/English-Diary-Jul-03-2020-Fri/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<p><img src="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%97%A5%E8%AE%B0/English%20DiaryJul%2003%2C2020%20Fri.jpg" alt="img"></p>
-<p>Today, I tweeted and started writing a short diary, trying to record my day. Today is another lazy day.Nothing I do today,well,forget it ,just try again tomorrow. Good night ,darling.</p>
 ]]></content>
       <tags>
         <tag>日记</tag>
@@ -198,36 +198,6 @@
       </tags>
   </entry>
   <entry>
-    <title>VPS搭建Aria2与AriaNg教程</title>
-    <url>/2021/06/17/How-to-install-Aria2-and-AriaNg-on-a-VPS/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<p>很久没有更新博客了，上次的技术教程还是Typecho博客的迁移笔记，这段时间事情比较多，自己懒癌又犯了上来，很快把博客的事情忘光了，想起来的时候我就在码这篇教程了。</p>
-<p>我想了一下，关于技术教程这方面的东西我是没什么可以写的了，毕竟我是个医学生，还是临床医学专业，这个专业和IT技术基本八竿子打不着，如果大家想单纯看技术教程的话，我不建议你在这里停留太久。</p>
-<p>（苦笑ing）</p>
-<p>以后尽量克服懒癌吧。</p>
-<p>关于Aria，大家应该略有耳闻，速度快，占用小，不限速，且在Windows、MacOS、Linux下都可以安装，树莓派、NAS、路由器等设备也可以安装，支持 HTTP &#x2F; FTP &#x2F; BT &#x2F; Magnet 磁力链接等类型的文件下载。结合第三方扩展甚至可以破解百度网盘的速度限制，但是这得看百度了，很可能手中的扩展或脚本很快就失效了，费时费力，几个人合租一下一年就40多点，这玩意也就是个下载器。</p>
-<p>这次的Aria我是在VPS上安装的，毕竟25G的空间还有大带宽，不来BT下载可惜了。</p>
-<p>PS：请注意你的VPS服务商是否有版权限制，若有的话进行BT下载很可能终止你的VPS服务！</p>
-<p>首先我使用的是CCAA的一键搭建脚本，然后就发现它始终无法连接我的Aria2，当时使用的命令是这些，我也搞不清哪里出错了…..</p>
-<p>yum -y install wget unzip curl<br>wget <a href="https://github.com/helloxz/ccaa/archive/master.zip">https://github.com/helloxz/ccaa/archive/master.zip</a><br>unzip master.zip &amp;&amp; cd ccaa-master &amp;&amp; sh ccaa.sh</p>
-<p>这里是<a href="https://www.yuque.com/helloz/ccaa/">CCAA的官方帮助文档</a>，我感觉是我的问题，若有大佬了解其缘由欢迎告知我。</p>
-<p>但是已经搭建起了AriaNg和filemanager，下面搭建Aria就行了。</p>
-<p>搭建Aria2的脚本，Xshell连接VPS，输入命令：</p>
-<p><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh</code></p>
-<p>如图所示，应该是这样的：</p>
-<p><img src="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%8A%80%E6%9C%AF/VPS%E6%90%AD%E5%BB%BAAria2%E4%B8%8EAriaNg%E6%95%99%E7%A8%8B/Snipaste_2021-06-17_19-59-25.png#vwid=335&vhei=297"></p>
-<p>将Aria2安装好以后，输入7，修改配置信息，将下载地址改为CCAA的下载地址。</p>
-<p><img src="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%8A%80%E6%9C%AF/VPS%E6%90%AD%E5%BB%BAAria2%E4%B8%8EAriaNg%E6%95%99%E7%A8%8B/Snipaste_2021-06-17_20-07-18.png#vwid=880&vhei=374"></p>
-<p>在AriaNg中的设置中更改端口，更改密匙，应该就能连接成功了。</p>
-<p>PS：我希望你们不要按照这个教程来了，CCAA的官方教程写的很清楚，我的经历比较曲折，当然如果你遇到了同样问题的话，这个方法不妨一试。</p>
-]]></content>
-      <tags>
-        <tag>软件教程</tag>
-        <tag>黑科技</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>You-get安装方法及使用教程</title>
     <url>/2021/04/15/How-to-install-and-use-You-get/</url>
     <content><![CDATA[<span id="more"></span>
@@ -271,6 +241,36 @@
 <li>再PS：从B站抓取视频过多后，下载速度会变慢，应该是B站做了限制。但这个限制比较玄学，有时候待一会儿就没事了，看运气吧。</li>
 </ul>
 <p>还有什么需要补充的，日后想起来再说。</p>
+]]></content>
+      <tags>
+        <tag>软件教程</tag>
+        <tag>黑科技</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VPS搭建Aria2与AriaNg教程</title>
+    <url>/2021/06/17/How-to-install-Aria2-and-AriaNg-on-a-VPS/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<p>很久没有更新博客了，上次的技术教程还是Typecho博客的迁移笔记，这段时间事情比较多，自己懒癌又犯了上来，很快把博客的事情忘光了，想起来的时候我就在码这篇教程了。</p>
+<p>我想了一下，关于技术教程这方面的东西我是没什么可以写的了，毕竟我是个医学生，还是临床医学专业，这个专业和IT技术基本八竿子打不着，如果大家想单纯看技术教程的话，我不建议你在这里停留太久。</p>
+<p>（苦笑ing）</p>
+<p>以后尽量克服懒癌吧。</p>
+<p>关于Aria，大家应该略有耳闻，速度快，占用小，不限速，且在Windows、MacOS、Linux下都可以安装，树莓派、NAS、路由器等设备也可以安装，支持 HTTP &#x2F; FTP &#x2F; BT &#x2F; Magnet 磁力链接等类型的文件下载。结合第三方扩展甚至可以破解百度网盘的速度限制，但是这得看百度了，很可能手中的扩展或脚本很快就失效了，费时费力，几个人合租一下一年就40多点，这玩意也就是个下载器。</p>
+<p>这次的Aria我是在VPS上安装的，毕竟25G的空间还有大带宽，不来BT下载可惜了。</p>
+<p>PS：请注意你的VPS服务商是否有版权限制，若有的话进行BT下载很可能终止你的VPS服务！</p>
+<p>首先我使用的是CCAA的一键搭建脚本，然后就发现它始终无法连接我的Aria2，当时使用的命令是这些，我也搞不清哪里出错了…..</p>
+<p>yum -y install wget unzip curl<br>wget <a href="https://github.com/helloxz/ccaa/archive/master.zip">https://github.com/helloxz/ccaa/archive/master.zip</a><br>unzip master.zip &amp;&amp; cd ccaa-master &amp;&amp; sh ccaa.sh</p>
+<p>这里是<a href="https://www.yuque.com/helloz/ccaa/">CCAA的官方帮助文档</a>，我感觉是我的问题，若有大佬了解其缘由欢迎告知我。</p>
+<p>但是已经搭建起了AriaNg和filemanager，下面搭建Aria就行了。</p>
+<p>搭建Aria2的脚本，Xshell连接VPS，输入命令：</p>
+<p><code>wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh</code></p>
+<p>如图所示，应该是这样的：</p>
+<p><img src="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%8A%80%E6%9C%AF/VPS%E6%90%AD%E5%BB%BAAria2%E4%B8%8EAriaNg%E6%95%99%E7%A8%8B/Snipaste_2021-06-17_19-59-25.png#vwid=335&vhei=297"></p>
+<p>将Aria2安装好以后，输入7，修改配置信息，将下载地址改为CCAA的下载地址。</p>
+<p><img src="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E6%8A%80%E6%9C%AF/VPS%E6%90%AD%E5%BB%BAAria2%E4%B8%8EAriaNg%E6%95%99%E7%A8%8B/Snipaste_2021-06-17_20-07-18.png#vwid=880&vhei=374"></p>
+<p>在AriaNg中的设置中更改端口，更改密匙，应该就能连接成功了。</p>
+<p>PS：我希望你们不要按照这个教程来了，CCAA的官方教程写的很清楚，我的经历比较曲折，当然如果你遇到了同样问题的话，这个方法不妨一试。</p>
 ]]></content>
       <tags>
         <tag>软件教程</tag>
@@ -420,34 +420,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Typecho博客创作问题笔记</title>
-    <url>/2021/02/25/Typecho-Note/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<p><img src="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E7%AC%94%E8%AE%B0/Typecho%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/2021-02-25.jpg#vwid=5019&vhei=3346"></p>
-<h4 id="2021-05-07"><a href="#2021-05-07" class="headerlink" title="2021-05-07"></a>2021-05-07</h4><p>今天发说说的时候又发现了一个问题：VOID主题或者说Typecho博客不支持微软拼音自带的表情？一旦输入后，表情后面的文字都会无法显示，有点想换成WordPress了。</p>
-<h4 id="2021-02-25"><a href="#2021-02-25" class="headerlink" title="2021-02-25"></a>2021-02-25</h4><p>Typecho博客、Markdown语法、还有我正在使用的VOID主题都很令我满意，但美中不足的是它们对于博客文本或者其他方面的编辑都有一点不方便：比如文字居中这个功能，Markdown语法是无法完成这个非常简单的事情。有点怀念Word，果真是吃着碗里的看着锅里的。但是通过代码块，却能够实现这些功能。</p>
-<ul>
-<li><p>文字居中&amp;左对齐&amp;右对齐混合文字大小</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!!!</span><br><span class="line">&lt;center&gt;&lt;font size=6&gt;测试&lt;/font&gt;&lt;/center&gt;</span><br><span class="line">!!!</span><br></pre></td></tr></table></figure>
-<p>其中<code>&lt;center&gt;</code>代表居中，<code>&lt;font size&gt;</code>代表字号大小</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!!!</span><br><span class="line">&lt;p align=&quot;left&quot;&gt;测试&lt;/p&gt;</span><br><span class="line">!!!</span><br></pre></td></tr></table></figure>
-<p>将<code>left</code>改为<code>right</code>就是右对齐，如要变换字体大小与上面相同，注意字号大小最大为6。</p>
-</li>
-<li><p>文章或者页面跳转外链（以百度为例）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!!!</span><br><span class="line">&lt;script&gt;window.location.href = &quot;www.baidu.com&quot;&lt;/script&gt;</span><br><span class="line">!!!</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Typecho博客VOID主题下如何为做图片题注</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!!!</span><br><span class="line">&lt;center&gt;&lt;font size=2&gt;图片题注&lt;/font&gt;&lt;/center&gt;</span><br><span class="line">!!!</span><br></pre></td></tr></table></figure>
-<p>与文字居中混合文字大小同源，就是把文字大小改了一下。</p>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>博客笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>更换VPS后Typecho博客迁移笔记</title>
     <url>/2021/05/02/Typecho-blog-migration-notes/</url>
     <content><![CDATA[<span id="more"></span>
@@ -534,6 +506,34 @@
       <tags>
         <tag>随想</tag>
         <tag>生活轨迹</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Typecho博客创作问题笔记</title>
+    <url>/2021/02/25/Typecho-Note/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<p><img src="https://raw.githubusercontent.com/AlexFelix1013/image/master/%E7%AC%94%E8%AE%B0/Typecho%E5%8D%9A%E5%AE%A2%E7%BB%B4%E6%8A%A4%E7%AC%94%E8%AE%B0/2021-02-25.jpg#vwid=5019&vhei=3346"></p>
+<h4 id="2021-05-07"><a href="#2021-05-07" class="headerlink" title="2021-05-07"></a>2021-05-07</h4><p>今天发说说的时候又发现了一个问题：VOID主题或者说Typecho博客不支持微软拼音自带的表情？一旦输入后，表情后面的文字都会无法显示，有点想换成WordPress了。</p>
+<h4 id="2021-02-25"><a href="#2021-02-25" class="headerlink" title="2021-02-25"></a>2021-02-25</h4><p>Typecho博客、Markdown语法、还有我正在使用的VOID主题都很令我满意，但美中不足的是它们对于博客文本或者其他方面的编辑都有一点不方便：比如文字居中这个功能，Markdown语法是无法完成这个非常简单的事情。有点怀念Word，果真是吃着碗里的看着锅里的。但是通过代码块，却能够实现这些功能。</p>
+<ul>
+<li><p>文字居中&amp;左对齐&amp;右对齐混合文字大小</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!!!</span><br><span class="line">&lt;center&gt;&lt;font size=6&gt;测试&lt;/font&gt;&lt;/center&gt;</span><br><span class="line">!!!</span><br></pre></td></tr></table></figure>
+<p>其中<code>&lt;center&gt;</code>代表居中，<code>&lt;font size&gt;</code>代表字号大小</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!!!</span><br><span class="line">&lt;p align=&quot;left&quot;&gt;测试&lt;/p&gt;</span><br><span class="line">!!!</span><br></pre></td></tr></table></figure>
+<p>将<code>left</code>改为<code>right</code>就是右对齐，如要变换字体大小与上面相同，注意字号大小最大为6。</p>
+</li>
+<li><p>文章或者页面跳转外链（以百度为例）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!!!</span><br><span class="line">&lt;script&gt;window.location.href = &quot;www.baidu.com&quot;&lt;/script&gt;</span><br><span class="line">!!!</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Typecho博客VOID主题下如何为做图片题注</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!!!</span><br><span class="line">&lt;center&gt;&lt;font size=2&gt;图片题注&lt;/font&gt;&lt;/center&gt;</span><br><span class="line">!!!</span><br></pre></td></tr></table></figure>
+<p>与文字居中混合文字大小同源，就是把文字大小改了一下。</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>博客笔记</tag>
       </tags>
   </entry>
 </search>
